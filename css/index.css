@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* General styles for the nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+/* Flexbox for the left section: Logo + Left menu */
+.left-menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the logo image */
+#logo {
+    height: 40px;
+    margin-right: 20px;
+}
+
+/* Left menu (Product, Resources, Prices) */
+.firstNav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Right menu (Log in, Get Started) */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+    padding: 0;
+}
+
+/* Styling for individual menu items */
+li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#login {
+    padding: 5px 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+#sign {
+    padding: 5px 10px;
+    color: #f8f9fa;
+    background-image: linear-gradient(142deg, rgb(80, 154, 240) 14%, rgb(71, 26, 255) 38%, rgb(71, 26, 255) 62%, rgb(80, 154, 240) 90%);
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+#sign:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .firstNav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        padding: 10px;
+    }
+
+    .firstNav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
